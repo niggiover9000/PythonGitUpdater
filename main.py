@@ -2,9 +2,9 @@ from git import Git
 
 
 def git_update(directory, repository):
-    Git(directory).clone(f"git://{}")
+    Git(directory).clone(repository)
 
 
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    git_update(None, "https://github.com/niggiover9000/PythonGitUpdater.git")
 
