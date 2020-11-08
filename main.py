@@ -14,7 +14,8 @@ def ping_server(ip):
     request = ping(ip, timeout=2)
     request = str(request)
     if request.startswith("Request timed out"):
-        raise TimeoutError("Could not reach update server. Please make sure you are connected to the internet.")
+        print("Could not reach update server. Please make sure you are connected to the internet.")
+        return False
     else:
         return True
 
