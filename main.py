@@ -1,11 +1,12 @@
-from git import Git
+from git import Git, GitCommandError
 from pythonping import ping
 
 
 def git_update(directory, repository):
     try:
         Git(directory).clone(repository)
-    except C
+    except GitCommandError as error:
+        print(error)
 
 
 def ping_server(ip):
